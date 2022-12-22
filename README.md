@@ -1,15 +1,15 @@
-#RefineBot - The Toy Car (ROS Melodic)
+# RefineBot - The Toy Car (ROS Melodic)
 
-###Steps:
+### Steps:
 - Step 1:
-Unzip the folder and add the package to the catkin_ws
+Unzip the folder and add the package to catkin_ws/src
 
-- Step 2:catkin make
+- Step 2: Build your workspace
 ```
 catkin_make clean && catkin_make
 ```
 
-- Step 3:source your workspace
+- Step 3: source your workspace
 ```
 source catkin_ws/devel/setup.bash
 ```
