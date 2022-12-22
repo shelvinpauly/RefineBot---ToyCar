@@ -1,0 +1,23 @@
+controller_joint_names: ['', 'first_joint', 'second_joint', 'third_joint', 'fourth_joint', ]
+
+# Robot name goes here
+refinebot: # change the name
+  # default controller
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Controller 1
+  control_right: # change the name
+    type: velocity_controllers/JointVelocityController
+    joint: third_joint
+
+  # Controller 2
+  control_left: # change the name
+    type: velocity_controllers/JointVelocityController
+    joint: fourth_joint
+
+  gazebo_ros_control:
+    pid gains:
+      third_joint: { p: 100.0, i: 0.01, d: 0.01 }
+      fourth_joint: { p: 100.0, i: 0.01, d: 0.01 }
